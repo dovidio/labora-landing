@@ -1,15 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labora — Contraction Timer</title>
+  <meta name="description" content="Track every contraction with confidence. Labora gives you real-time labor stage insights, a built-in breathing guide, and smart reminders — so you can focus on what matters most." />
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Landing page for iOS app</title>
-    </head>
+  <!-- Canonical -->
+  <link rel="canonical" href="https://getlabora.app/" />
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Labora" />
+  <meta property="og:title" content="Labora — Contraction Timer App for Moms" />
+  <meta property="og:description" content="Track every contraction with confidence. Real-time labor stage insights, breathing guide, and smart 5-1-1 alerts. Free for iPhone." />
+  <meta property="og:url" content="https://getlabora.app/" />
+  <meta property="og:image" content="https://getlabora.app/assets/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Labora — Contraction Timer App for Moms" />
+  <meta name="twitter:description" content="Track every contraction with confidence. Real-time labor stage insights, breathing guide, and smart 5-1-1 alerts. Free for iPhone." />
+  <meta name="twitter:image" content="https://getlabora.app/assets/og-image.webp" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#F0EEEB" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/favicon/favicon-32x32.webp" />
+  <link rel="icon" type="image/webp" sizes="16x16" href="assets/favicon/favicon-16x16.webp" />
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.webp" />
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/favicon/android-chrome-192x192.webp" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="assets/favicon/android-chrome-512x512.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Labora — Contraction Timer",
+    "description": "Track every contraction with confidence. Labora gives you real-time labor stage insights, a built-in breathing guide, and smart reminders so you can focus on what matters most.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS",
+    "url": "https://getlabora.app/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Labora",
+      "url": "https://getlabora.app/",
+      "email": "support@laboraapp.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When should you start timing contractions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You should start timing contractions when they become regular, noticeable, and uncomfortable. Tracking the timing helps you understand whether labor may be progressing. A contraction timer app like Labora automatically records contraction duration, the time between contractions, and the overall contraction pattern."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you time contractions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To time contractions, record when the contraction starts, when the contraction ends, and the time between contractions. A contraction timer app like Labora makes this simple. Just start the timer when a contraction begins and stop it when it ends. The app automatically records the duration and interval between contractions and helps you see patterns as labor progresses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the simplest way to track contractions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The simplest way to track contractions is with a contraction timer app like Labora. You only need to tap start when a contraction begins and tap stop when it ends. Labora then automatically calculates the contraction duration, the time between contractions, and the overall pattern. You can even start the timer directly from your Lock Screen or Apple Watch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should you go to the hospital with contractions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many providers suggest the 5-1-1 rule as a guideline for when to contact your doctor or go to the hospital. This means contractions are about 5 minutes apart, last around 1 minute each, and continue for at least 1 hour. Always follow the guidance of your doctor or midwife, especially if contractions become intense or you notice unusual symptoms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 5-1-1 rule?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 5-1-1 rule is a common guideline used to identify active labor. It means contractions are about 5 minutes apart, last around 1 minute each, and continue for at least 1 hour. Tracking contractions with a timer like Labora helps you easily see when this pattern is reached."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you measure contraction frequency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contraction frequency refers to how often contractions occur. It is measured by calculating the time between the start of one contraction and the start of the next. As labor progresses, contractions usually become closer together. A contraction timer like Labora tracks this automatically and shows the interval between contractions for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you count contractions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each contraction is counted from the moment it begins until it ends. Recording each contraction helps you see how long they last and how close together they are. Watching these patterns can help you understand how labor may be progressing. A contraction timer app like Labora makes this easier by automatically recording each contraction and organizing the timing for you."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ---- Nav ---- -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.webp" alt="Labora logo" class="nav-logo-image" width="32" height="32" />
+      Labora
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="https://apps.apple.com/app/id6749383000?ct=LP" class="nav-cta">Download</a>
+  </nav>
+
+  <main>
+
+  <!-- ---- Hero ---- -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="badge">Completely free. No ads. No subscriptions.</span>
+    </div>
+    <h1 class="hero-headline">
+      The Best Way to Time Contractions
+    </h1>
+    <p class="hero-sub">
+      A simple contraction timer app designed for real labor.</br>
+      No unlocking. No navigating. No stress.
+    </p>
+    <p class="cta-desc">
+      Trusted by more than 3,000 moms worldwide
+    </p>
+    <a href="https://apps.apple.com/app/id6749383000?ct=LP" class="btn-dark" id="download">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+      </svg>
+      Download on the App Store
+    </a>
+    <img src="assets/Labora_hero.webp" alt="Labora app preview" class="hero-image" loading="eager" decoding="async" />
+  </section>
+
+  <!-- ---- Stats ---- -->
+  <section class="stats-section" aria-label="Labora by the numbers">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <p class="stat-value">3,000+</p>
+        <p class="stat-label">Moms helped</p>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <p class="stat-value">120,000+</p>
+        <p class="stat-label">Contractions recorded</p>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <p class="stat-value">107</p>
+        <p class="stat-label">Countries</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- Feature Cards ---- -->
+  <section id="features" class="cards-grid">
+
+    <div class="card card-wide">
+      <div class="card-icon" aria-hidden="true">
+        <img src="assets/features/lockscreen.png" alt="" class="card-icon-image" width="280" height="280" loading="lazy" />
+      </div>
+      <div class="card-copy">
+        <h3 class="card-title">Start timing instantly</h3>
+        <p class="card-desc">
+          One tap. No fumbling. Start and stop tracking directly from your lock screen. Stay focused on breathing, not your phone.
+        </p>
+      </div>
+    </div>
+
+    <div class="card card-wide card-wide-image-right">
+      <div class="card-icon" aria-hidden="true">
+        <img src="assets/features/labora-watch-app.webp" alt="" class="card-icon-image" width="280" height="280" loading="lazy" />
+      </div>
+      <div class="card-copy">
+        <h3 class="card-title">Track from your wrist</h3>
+        <p class="card-desc">
+          Use Apple Watch to start and stop contractions.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon" aria-hidden="true">
+        <img src="assets/features/labor-stage.png" alt="" class="card-icon-image" width="240" height="240" loading="lazy" />
+      </div>
+      <h3 class="card-title">See labor progress clearly</h3>
+      <p class="card-desc">
+        Visual timelines make it easy to understand how labor is progressing.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon" aria-hidden="true">
+        <img src="assets/features/breathing.png" alt="" class="card-icon-image" width="240" height="240" loading="lazy" />
+      </div>
+      <h3 class="card-title">Focus on breathing</h3>
+      <p class="card-desc">
+        A simple breathing guide helps you stay calm during contractions.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon" aria-hidden="true">
+        <img src="assets/features/notification.png" alt="" class="card-icon-image" width="240" height="240" loading="lazy" />
+      </div>
+      <h3 class="card-title">Notifications for contraction patterns</h3>
+      <p class="card-desc">
+        Set the pattern you're watching for and Labora notifies you the moment you hit it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ---- Reviews ---- -->
+  <section class="reviews-section" aria-label="Customer reviews">
+    <div class="reviews-header">
+      <p class="section-label">Reviews</p>
+      <h2 class="section-title">They love it,<br>so will you.</h2>
+    </div>
+    <div class="reviews-track">
+
+      <div class="review-card review-card-first">
+        <p class="review-quote">"I love this app!! So grateful that it's free and that there are widgets to add to my lock screen and my Home Screen. Thank you!!"</p>
+        <p class="review-author">Mar 11, 2026 - tayray99</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-quote">"Easiest and calmest app to use to track my contractions, free to use and didn't have lots of distracting things on the screen so I was able to focus on just my breathing."</p>
+        <p class="review-author">Feb 18, 2026 - P9457</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-quote">"Free, widget works, Apple Watch widget works. Basically perfect in every way. Thank you!"</p>
+        <p class="review-author">Feb 16, 2026 - Pmoneyyyy</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-quote">"I was looking for an app that would let my wife start a live activity using a lock screen shortcut, thought it would be impossible to find. This app was perfect during labor!"</p>
+        <p class="review-author">Jan 29, 2026 - Alwaraki</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-quote">"Thank you so much for making and sharing this app! It was just what we needed for when my wife went into labor. Really easy to use and loved the ability to start the timer from the Lock Screen."</p>
+        <p class="review-author">Dec 11, 2025 - sheeshee24</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-quote">"Finally a free timer app that actually has a widget on both the Lock Screen and Apple Watch. Super simple to use and no annoying ads popping up. And if you forget to end the contraction you can go in and edit it."</p>
+        <p class="review-author">Nov 19, 2025 - Wife of Justin</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-quote">"I love that it's free and it helped me time my contractions with confidence. The Lock Screen button was so helpful!"</p>
+        <p class="review-author">Oct 15, 2025 - AngelBullard</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ---- Quote ---- -->
+  <section class="quote-section">
+    <div class="quote-inner">
+      <img
+        src="assets/Labora_founder.webp"
+        alt="Labora founder"
+        class="quote-founder-image"
+        width="112"
+        height="112"
+        loading="lazy"
+      />
+      <div class="quote-story">
+        <p>Hey, I'm Panittha 👋</p>
+        <p>When I was pregnant with my first baby, I looked for a contraction timer app.</p>
+        <p>But <strong>most apps were full of ads, subscriptions, and poor design.</strong></p>
+        <p>During labor, the last thing you want is to struggle with your phone.</p>
+        <p>So I built <strong>Labora</strong>, a simple but powerful contraction timer made for real labor.</p>
+        <p>With Labora, you can <strong>start the timer directly from the Lock Screen</strong>, so you <strong>don't have to unlock your phone or search for the app.</strong></p>
+        <p>I hope Labora is as useful to you as it was to me.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- FAQ ---- -->
+  <div id="faq" class="faq-section">
+    <div class="faq-header">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">Got questions?<br>Here's the answers.</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          When should you start timing contractions?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          You should start timing contractions when they become regular, noticeable, and uncomfortable.
+          Tracking the timing helps you understand whether labor may be progressing.
+          A contraction timer app like Labora automatically records contraction duration, the time between contractions, and the overall contraction pattern.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          How do you time contractions?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          To time contractions, record:
+          <ul>
+            <li>when the contraction starts</li>
+            <li>when the contraction ends</li>
+            <li>the time between contractions</li>
+          </ul>
+          A contraction timer app like Labora makes this simple.
+          Just start the timer when a contraction begins and stop it when it ends.
+          The app automatically records the duration and interval between contractions and helps you see patterns as labor progresses.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          What is the simplest way to track contractions?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          The simplest way to track contractions is with a contraction timer app like Labora.
+          You only need to tap start when a contraction begins and tap stop when it ends.
+          Labora then automatically calculates the contraction duration, the time between contractions, and the overall pattern.
+          You can even start the timer directly from your Lock Screen or Apple Watch.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          When should you go to the hospital with contractions?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          Many providers suggest the 5-1-1 rule as a guideline for when to contact your doctor or go to the hospital.
+          This means contractions are about 5 minutes apart, last around 1 minute each, and continue for at least 1 hour.
+          Always follow the guidance of your doctor or midwife, especially if contractions become intense or you notice unusual symptoms.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          What is the 5-1-1 rule?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          The 5-1-1 rule is a common guideline used to identify active labor.
+          It means contractions are about 5 minutes apart, last around 1 minute each, and continue for at least 1 hour.
+          Tracking contractions with a timer like Labora helps you easily see when this pattern is reached.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          How do you measure contraction frequency?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          Contraction frequency refers to how often contractions occur.
+          It is measured by calculating the time between the start of one contraction and the start of the next.
+          As labor progresses, contractions usually become closer together.
+          A contraction timer like Labora tracks this automatically and shows the interval between contractions for you.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          How do you count contractions?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          Each contraction is counted from the moment it begins until it ends.
+          Recording each contraction helps you see how long they last and how close together they are.
+          Watching these patterns can help you understand how labor may be progressing.
+          A contraction timer app like Labora makes this easier by automatically recording each contraction and organizing the timing for you.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </main>
+
+  <!-- ---- Footer ---- -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.webp" alt="Labora logo" class="footer-logo-image" width="32" height="32" loading="lazy" />
+          Labora
+        </div>
+        <p class="footer-brand-desc">Labora is a simple contraction timer app that helps you time contractions during labor. Track contraction duration, intervals, and patterns automatically so you know when labor is progressing and when it may be time to go to the hospital.</p>
+      </div>
+      <div>
+        <div class="footer-col-label">The App</div>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://apps.apple.com/app/id6749383000?ct=LP">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-label">The Legal</div>
+        <ul class="footer-links">
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Labora. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-icon').textContent = '+';
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        icon.textContent = '×';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
+
+</body>
+</html>
